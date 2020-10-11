@@ -95,6 +95,12 @@ document.body.onkeyup = function(e){
             document.getElementById("throwaway").style.display = "block";    
             document.getElementById('throwaway').innerHTML = "DESTROY COMPUTER"
         }  
+        if (score>50) {
+            document.getElementById('textbox').innerHTML = "Omg. You just hit your head over 50 times. How does that feel?";
+        }
+        if (score>100) {
+            document.getElementById('textbox').innerHTML = "You just passed 100! You're accomplishing <i>something</i>!";
+        }
     }
 }
 
