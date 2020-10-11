@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <title>IM STUCK</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="imstuck_computer.png">
 </head>
 
 <body>    
     <div class="keys">
         <img id="img" src="hit1.jpg"/>
         <div data-key="32" class="key">
-            <br/>
             <span class="sound score-box">hit score: <span id="hit-score"></span></span>
         </div>
         <br/>
@@ -18,6 +20,8 @@
         <div style="margin: auto; display:flex; justify-content: center;">
             <button id="throwaway" style="display: none; text-align:center; width:14%; background-color: black; color: white; " onclick="throwAway()"></button>
         </div>
+        <br/>
+        <p style="color:rgb(211, 211, 211); text-align:center; font-size:11px; ">How should I improve this app? Tweet ideas to <a style="color:rgb(143, 225, 255)" href="https://twitter.com/heyathebird">@heyathebird</a>.</p>
     </div>
     <audio data-key="32" src="slap.wav"></audio>
     <audio id="myAudio">
@@ -78,25 +82,25 @@ document.body.onkeyup = function(e){
         changeImage();
         score+=1
         document.getElementById('hit-score').innerHTML = score;
-        if (score>4) {
+        if (score>9) {
             document.getElementById('textbox').innerHTML = "Ain't life hard?";
         }
-        if (score>9) {
+        if (score>19) {
             document.getElementById('textbox').innerHTML = "Uhh... are you ok?";
         }
-        if (score>14) {
+        if (score>29) {
             document.getElementById('textbox').innerHTML = "I think it's time for you to take a break.";
         }
-        if (score>19) {
+        if (score>39) {
             document.getElementById('textbox').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
         }  
-        if (score>24) {
-            document.getElementById('textbox').innerHTML = "Alright, let's throw away the computer.";
+        if (score>49) {
+            document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
             document.getElementById("throwaway").style.display = "block";    
-            document.getElementById('throwaway').innerHTML = "DESTROY COMPUTER"
+            document.getElementById('throwaway').innerHTML = "DESTROY COMPUTER 💀"
         }  
-        if (score>50) {
-            document.getElementById('textbox').innerHTML = "Omg. You just hit your head over 50 times. How does that feel?";
+        if (score>75) {
+            document.getElementById('textbox').innerHTML = "Omg. You just hit your head over 75 times. How does that feel?";
         }
         if (score>100) {
             document.getElementById('textbox').innerHTML = "You just passed 100! You're accomplishing <i>something</i>!";

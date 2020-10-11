@@ -20,7 +20,7 @@ html {
   .key {
     margin: 0rem;
     font-size: 1rem;
-    padding: 1rem ;
+    padding: .5rem ;
     transition: all .07s ease;
     text-align: center; 
   }
@@ -45,7 +45,7 @@ html {
   #img {
     display: flex;
     justify-content: center;
-    width: 24rem;
+    width: 25rem;
     margin: auto;
     padding: 1rem;
   }
