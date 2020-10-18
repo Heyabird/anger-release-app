@@ -11,20 +11,21 @@
 </head>
 
 <body>    
+    <div id="secret-button" onclick="updateUI()"> </div>
     <div class="keys">
         <img id="img" src="hit1.jpg"/>
         <div data-key="32" class="key">
             <span class="sound score-box">hit score: <span id="hit-score"></span></span>
         </div>
         <br/>
-        <p id="textbox" style="text-align: center;">Press space bar when you feel frustrated.</p>
-        <p id="textbox-mobile" style="text-align: center;">Click below when you feel frustrated.</p>
-        <button id="button-mobile" onclick="updateUI()">HIT HEAD</button>
+        <p id="textbox" style="text-align: center;">Press space bar to start.</p>
+        <p id="textbox-mobile">Tap anywhere to start.</p>
+        <!-- <button id="button-mobile" onclick="updateUI()">SMASH</button> -->
         <div style="margin: auto; display:flex; justify-content: center;">
             <button id="throwaway" onclick="throwAway()"></button>
         </div>
         <br/>
-        <p style="color:rgb(211, 211, 211); text-align:center; font-size:11px; ">How should I improve this app? Tweet ideas to <a style="color:rgb(143, 225, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p>
+        <p class="footer">How should I improve this app? Tweet ideas to <a style="color:rgb(143, 225, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p>
     </div>
     <audio data-key="32" src="slap.wav"></audio>
     <audio id="myAudio">
@@ -86,14 +87,18 @@ function updateUI() {
         document.getElementById('hit-score').innerHTML = score;
         if (score>9) {
             document.getElementById('textbox').innerHTML = "Ain't life hard?";
+            document.getElementById('textbox').innerHTML = "Ain't life hard?";
         }
         if (score>19) {
             document.getElementById('textbox').innerHTML = "Uhh... are you ok?";
+            document.getElementById('textbox').innerHTML = "Uhh... are you ok?";
         }
         if (score>29) {
+            document.getElementById('textbox').innerHTML = "I think it's time for you to take a break.";            
             document.getElementById('textbox').innerHTML = "I think it's time for you to take a break.";
         }
         if (score>39) {
+            document.getElementById('textbox').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
             document.getElementById('textbox').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
         }  
         if (score>49) {

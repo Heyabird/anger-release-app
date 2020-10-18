@@ -15,6 +15,7 @@ html {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
   
   .key {
@@ -27,7 +28,6 @@ html {
   
   .playing {
     transform: scale(3);
-
   }
   
   kbd {
@@ -72,8 +72,16 @@ html {
     width:14%; 
     background-color: black; 
     color: white;
+    z-index: 3;
   }
-  
+
+  .footer {
+    color:rgb(211, 211, 211); 
+    text-align:center; 
+    font-size:11px;
+    z-index:3;
+  }
+
 
   @media only screen and (max-width: 600px) {
     /* body {
@@ -84,26 +92,42 @@ html {
       width: 40%;
     }
     #img {
-      max-width: 80%;
-      margin-top: 4rem;
+      max-width: 90%;
+      margin-top: 0rem;
     }
     #textbox {
       display: none;
     }
     #textbox-mobile {
       width: 70%;
-    }
-    #textbox-mobile p{
-      display: flex;
-      font-size: .5rem;
-      margin: .5rem auto;
-      text-align: center;
-    }
-    #button-mobile {
       display: flex;
       justify-content: center;
-      background-color: rgb(255, 67, 67);
-      border: none;
+      margin: auto;
+      text-align: center;
+      font-size: .8rem;
+    }
+    #textbox-mobile p{
       margin: .5rem auto;
     }
+    #throwaway {
+      width: unset;
+      margin-top: 1rem;
+    }
+    .footer {
+      padding-top: 3rem;
+      /* position: absolute; */
+      /* bottom: 1rem;
+      margin: auto;
+      display: flex;
+      justify-content: center; */
+    }
+
+  #secret-button {
+    z-index: 2;
+    height: 600px;
+    width: 100%;
+    /* background-color: red; */
+    position: absolute;
+  }
+  
   }
