@@ -72,14 +72,15 @@ html {
     width:14%; 
     background-color: black; 
     color: white;
-    z-index: 3;
+    z-index: 4;
+    position: absolute;
   }
 
   .footer {
     color:rgb(211, 211, 211); 
     text-align:center; 
     font-size:11px;
-    z-index:3;
+    padding-top: 1rem;
   }
 
 
@@ -112,19 +113,16 @@ html {
     #throwaway {
       width: unset;
       margin-top: 1rem;
+
     }
     .footer {
-      padding-top: 3rem;
-      /* position: absolute; */
-      /* bottom: 1rem;
-      margin: auto;
-      display: flex;
-      justify-content: center; */
+      padding-top: 7rem;
+      z-index:4;
     }
 
   #secret-button {
     z-index: 2;
-    height: 600px;
+    height: 100%;
     width: 100%;
     /* background-color: red; */
     position: absolute;
