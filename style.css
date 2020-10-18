@@ -85,6 +85,10 @@ html {
 
 
   @media only screen and (max-width: 600px) {
+    /* disallow zoom on double-tap */
+    .disable-dbl-tap-zoom {
+      touch-action: manipulation;
+    }
     /* body {
       color: red;
     } */
