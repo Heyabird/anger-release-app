@@ -1,6 +1,7 @@
 html {
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(0, 0, 0);
+    font-weight: 200;
   }
   
 body,html {
@@ -36,16 +37,16 @@ kbd {
 }
 
 .sound {
-  font-size: 25px;
+  font-size: 20px;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  /* letter-spacing: .1rem; */
   color: #ff1900;
 }
 
 #img {
   display: flex;
   justify-content: center;
-  width: 25rem;
+  width: 28rem;
   margin: auto;
   padding: 0 1rem 1rem 1rem;
 }
@@ -63,7 +64,7 @@ kbd {
 }
 
 #textbox {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #textbox p {
@@ -84,7 +85,7 @@ kbd {
   z-index: 4;
   position: absolute;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   font-size: 20px;
   cursor: pointer;
@@ -97,11 +98,14 @@ kbd {
 .footer {
   color:rgb(126, 126, 126); 
   text-align:center; 
-  font-size:15px;
+  font-size: 15px;
   padding-top: 1rem;
   font-style: italic;
+  position: absolute;
+  bottom: 1.5rem;
+  margin: auto;
+  width: 100%;
 }
-
 
   @media only screen and (max-width: 600px) {
     /* disallow zoom on double-tap */
@@ -112,12 +116,14 @@ kbd {
       color: red;
     } */
     .sound {
-      font-size: 1.2rem;
+      font-size: 16px;
       width: 40%;
     }
     #img {
-      max-width: 90%;
-      margin-top: .5rem;
+      max-width: 100%;
+      margin-top: 3rem;
+      padding: 0;
+      margin-bottom: 1rem;
     }
     #textbox {
       display: none;
@@ -137,23 +143,22 @@ kbd {
     }
     #throwaway {
       width: unset;
+      min-width: unset;
       margin-top: 1rem;
-      font-size: 15px;
+      font-size: 16px;
+      padding: 5px 10px;
     }
     .footer {
       padding-top: 4rem;
       z-index:4;
+      font-size: 13px;
+      bottom: 1.5rem;
     }
-
-  #secret-button {
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    /* background-color: red; */
-    position: absolute;
-  }
-  .footer {
-    font-size: 13px;
-  }
-  
+    #secret-button {
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    
   }

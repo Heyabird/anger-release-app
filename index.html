@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>SMASH COMPUTER</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" 
@@ -25,7 +26,9 @@
             <button id="throwaway" onclick="throwAway()"></button>
         </div>
         <br/>
-        <p class="footer">Made with love and angst by <a style="color:rgb(87, 210, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p>
+        <div class="footer">
+            <p>Made with love and angst by <a style="color:rgb(87, 210, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p>
+        </div>
     </div>
     <audio data-key="32" src="slap.wav"></audio>
     <audio id="slapSound">
@@ -115,7 +118,7 @@ function updateUI() {
             document.getElementById('textbox').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
             document.getElementById('textbox-mobile').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
         }  
-        if (score>2) {
+        if (score>49) {
             document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";            
             document.getElementById('textbox-mobile').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
             document.getElementById("throwaway").style.display = "block";    
