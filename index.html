@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>IM STUCK</title>
+    <title>SMASH COMPUTER</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" 
       type="image/png" 
@@ -13,7 +13,7 @@
 <body class="disable-dbl-tap-zoom">    
     <div id="secret-button" onclick="updateUI()"> </div>
     <div class="keys">
-        <img id="img" src="hit1.jpg"/>
+        <img id="img" src="hit1.svg"/>
         <div data-key="32" class="key">
             <span class="sound score-box">hit score: <span id="hit-score"></span></span>
         </div>
@@ -25,7 +25,7 @@
             <button id="throwaway" onclick="throwAway()"></button>
         </div>
         <br/>
-        <p class="footer">How should I improve this app? Tweet ideas to <a style="color:rgb(143, 225, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p>
+        <p class="footer">Made with love and angst by <a style="color:rgb(87, 210, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p>
     </div>
     <audio data-key="32" src="slap.wav"></audio>
     <audio id="slapSound">
@@ -78,19 +78,19 @@ function removeTransition(e) {
 }
 
 function changeImage() {
-    document.getElementById("img").src = "hit2.jpg";
-    setTimeout (function(){ document.getElementById("img").src = "hit1.jpg" }, 200);
+    document.getElementById("img").src = "hit2.svg";
+    setTimeout (function(){ document.getElementById("img").src = "hit1.svg" }, 200);
 }
 
 function throwAway() {
     shatterSound.currentTime = 600;
     document.getElementById("throwaway").style.display = "none";    
-    setTimeout (function(){ document.getElementById("img").src = "hit3.jpg" }, 300);
-    setTimeout (function(){ document.getElementById("img").src = "hit4.jpg" }, 500);
-    setTimeout (function(){ document.getElementById("img").src = "hit5.jpg" }, 800);
+    setTimeout (function(){ document.getElementById("img").src = "hit3.svg" }, 300);
+    setTimeout (function(){ document.getElementById("img").src = "hit4.svg" }, 500);
+    setTimeout (function(){ document.getElementById("img").src = "hit5.svg" }, 800);
     setTimeout (function(){ shatterSound.play()}, 600);
     setTimeout (function(){ document.getElementById('textbox').innerHTML = "Press space bar to continue." }, 900);
-    // setTimeout (function(){ document.getElementById("img").src = "hit6.jpg"  }, 1000);
+    // setTimeout (function(){ document.getElementById("img").src = "hit6.svg"  }, 1000);
     console.log("test")
 }
 
@@ -115,7 +115,7 @@ function updateUI() {
             document.getElementById('textbox').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
             document.getElementById('textbox-mobile').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
         }  
-        if (score>49) {
+        if (score>2) {
             document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";            
             document.getElementById('textbox-mobile').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
             document.getElementById("throwaway").style.display = "block";    
