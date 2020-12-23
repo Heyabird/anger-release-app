@@ -110,6 +110,12 @@ function updateUI() {
             document.getElementById('textbox').innerHTML = "Uhh... are you ok?";
             document.getElementById('textbox-mobile').innerHTML = "Uhh... are you ok?";
         }
+        if (score>25) {
+            document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";            
+            document.getElementById('textbox-mobile').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
+            document.getElementById("throwaway").style.display = "block";    
+            document.getElementById('throwaway').innerHTML = "DESTROY COMPUTER 💀"
+        }  
         if (score>29) {
             document.getElementById('textbox').innerHTML = "I think it's time for you to take a break.";            
             document.getElementById('textbox-mobile').innerHTML = "I think it's time for you to take a break.";
@@ -119,18 +125,16 @@ function updateUI() {
             document.getElementById('textbox-mobile').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
         }  
         if (score>49) {
-            document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";            
-            document.getElementById('textbox-mobile').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
-            document.getElementById("throwaway").style.display = "block";    
-            document.getElementById('throwaway').innerHTML = "DESTROY COMPUTER 💀"
+            document.getElementById('textbox').innerHTML = "Welp, I hope this is kinda helpful at the least.";
+            document.getElementById('textbox-mobile').innerHTML = "Welp, I hope this is kinda helpful at the least.";
         }  
         if (score>75) {
             document.getElementById('textbox').innerHTML = "Omg. You just hit your head over 75 times. How does that feel?";            
             document.getElementById('textbox-mobile').innerHTML = "Omg. You just hit your head over 75 times. How does that feel?";
         }
         if (score>100) {
-            document.getElementById('textbox').innerHTML = "You just passed 100! You're accomplishing <i>something</i>!";            
-            document.getElementById('textbox-mobile').innerHTML = "You just passed 100! You're accomplishing <i>something</i>!";
+            document.getElementById('textbox').innerHTML = "You just passed 100! You're accomplishing something!";            
+            document.getElementById('textbox-mobile').innerHTML = "You just passed 100! You're accomplishing something!";
         }
         if (score>150) {
             document.getElementById('textbox').innerHTML = "Should I call the ambulance...?";            
