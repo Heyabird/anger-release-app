@@ -58,40 +58,49 @@ function updateUI() {
         if (score>19) {
             document.getElementById('textbox').innerHTML = "Uhh... are you ok?";
             document.getElementById('textbox-mobile').innerHTML = "Uhh... are you ok?";
+            document.getElementById('bar').style.width = "80%";
         }
         if (score>25) {
             document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";            
             document.getElementById('textbox-mobile').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
             document.getElementById("throwaway").style.display = "block";    
             document.getElementById('throwaway').innerHTML = "THROW COMPUTER 😵"
+            document.getElementById('bar').style.width = "70%";
         }  
         if (score>29) {
             document.getElementById('textbox').innerHTML = "I think it's time for you to take a break.";            
             document.getElementById('textbox-mobile').innerHTML = "I think it's time for you to take a break.";
+            document.getElementById('bar').style.width = "60%";
         }
         if (score>39) {
             document.getElementById('textbox').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
             document.getElementById('textbox-mobile').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
+            document.getElementById('bar').style.width = "50%";
         }  
         if (score>49) {
             document.getElementById('textbox').innerHTML = "Welp, I hope this is kinda helpful at the least.";
             document.getElementById('textbox-mobile').innerHTML = "Welp, I hope this is kinda helpful at the least.";
+            document.getElementById('bar').style.width = "40%";
         }  
         if (score>75) {
             document.getElementById('textbox').innerHTML = "Omg. You just hit your head over 75 times. How does that feel?";            
             document.getElementById('textbox-mobile').innerHTML = "Omg. You just hit your head over 75 times. How does that feel?";
+            document.getElementById('bar').style.width = "30%";
         }
         if (score>100) {
             document.getElementById('textbox').innerHTML = "You just passed 100! You're accomplishing something!";            
             document.getElementById('textbox-mobile').innerHTML = "You just passed 100! You're accomplishing something!";
+            document.getElementById('bar').style.width = "20%";
         }
         if (score>150) {
             document.getElementById('textbox').innerHTML = "Should I call the ambulance...?";            
             document.getElementById('textbox-mobile').innerHTML = "Should I call the ambulance...?";
+            document.getElementById('bar').style.width = "10%";
         }
         if (score>200) {
             document.getElementById('textbox').innerHTML = "I don't have more messages for you, but I believe in you. If you came this far, you definitely have the willpower to succeed!";
             document.getElementById('textbox-mobile').innerHTML = "I don't have more messages for you, but I believe in you. If you came this far, you definitely have the willpower to succeed!";
+            document.getElementById('bar').style.width = "0%";
         }   
 }
 

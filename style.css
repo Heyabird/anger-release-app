@@ -17,6 +17,10 @@ body,html {
   /* background-color: b\ */
 }
 
+#hit-score {
+  color: red;
+}
+
 #health-bar {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -51,8 +55,10 @@ body,html {
   transition: width .5s linear;
 }
 
-#hit-score {
-  color: red;
+#hp-text {
+  position: absolute; 
+  z-index: 2; 
+  color: white;
 }
 
 .keys {
