@@ -17,9 +17,6 @@ body,html {
   /* background-color: b\ */
 }
 
-#hit-score {
-  color: red;
-}
 
 #health-bar {
   -webkit-box-sizing: border-box;

@@ -76,6 +76,7 @@ function updateUI() {
             document.getElementById('textbox').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
             document.getElementById('textbox-mobile').innerHTML = "I know this sucks but you'll get out of it and feel so much better instantly.";
             document.getElementById('bar').style.width = "50%";
+            document.getElementById('bar').style.background = "rgb(255, 163, 3)";
         }  
         if (score>49) {
             document.getElementById('textbox').innerHTML = "Welp, I hope this is kinda helpful at the least.";
@@ -91,6 +92,7 @@ function updateUI() {
             document.getElementById('textbox').innerHTML = "You just passed 100! You're accomplishing something!";            
             document.getElementById('textbox-mobile').innerHTML = "You just passed 100! You're accomplishing something!";
             document.getElementById('bar').style.width = "20%";
+            document.getElementById('bar').style.background = "red";
         }
         if (score>150) {
             document.getElementById('textbox').innerHTML = "Should I call the ambulance...?";            
