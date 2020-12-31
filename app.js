@@ -2,14 +2,8 @@ var score = 0;
 document.getElementById('hit-score').innerHTML = score;
 var shatterSound = document.getElementById("shatterSound");
 var slapSound = document.getElementById("slapSound");
+var mainImg = document.getElementById("img").src;
 function animateText(e) {
-    // console.log(e.keyCode);
-    // const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    // console.log(audio);
-    // if(!audio) return; //stop function from running
-    // audio.currentTime = 0; //rewind to the start
-    // audio.play();
-    // animation
     var key = document.querySelector(".key[data-key=\"" + e.keyCode + "\"]");
     console.log(key);
     key.classList.add('playing');
@@ -24,7 +18,6 @@ function removeTransition(e) {
     // console.log(e)
     if (e.propertyName !== 'transform')
         return; //skip if its not transformed
-    // console.log(e.propertyName)
     // after the transition time, we want to reverse everything (this = key)
     this.classList.remove('playing');
 }

@@ -2,18 +2,10 @@ var score = 0;
 document.getElementById('hit-score').innerHTML = score;  
 var shatterSound = document.getElementById("shatterSound");
 var slapSound = document.getElementById("slapSound")
+var mainImg = (<HTMLInputElement>document.getElementById("img")).src;
+
 
 function animateText(e) {
-    // console.log(e.keyCode);
-    // const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    // console.log(audio);
-    // if(!audio) return; //stop function from running
-
-    // audio.currentTime = 0; //rewind to the start
-
-    // audio.play();
-
-    // animation
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     console.log(key);
     key.classList.add('playing');
@@ -29,22 +21,21 @@ function playSoundMobile() {
 function removeTransition(e) {
     // console.log(e)
     if (e.propertyName!=='transform') return; //skip if its not transformed
-    // console.log(e.propertyName)
     // after the transition time, we want to reverse everything (this = key)
     this.classList.remove('playing');
 }
 
 function changeImage() {
-    document.getElementById("img").src = "hit2.svg";
-    setTimeout (function(){ document.getElementById("img").src = "hit1.svg" }, 200);
+    (<HTMLInputElement>document.getElementById("img")).src = "hit2.svg";
+    setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit1.svg" }, 200);
 }
 
 function throwAway() {
     shatterSound.currentTime = 600;
     document.getElementById("throwaway").style.display = "none";    
-    setTimeout (function(){ document.getElementById("img").src = "hit3.svg" }, 300);
-    setTimeout (function(){ document.getElementById("img").src = "hit4.svg" }, 500);
-    setTimeout (function(){ document.getElementById("img").src = "hit5.svg" }, 800);
+    setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit3.svg" }, 300);
+    setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit4.svg" }, 500);
+    setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit5.svg" }, 800);
     setTimeout (function(){ shatterSound.play()}, 600);
     setTimeout (function(){ document.getElementById('textbox').innerHTML = "Press space bar to continue." }, 900);
     // setTimeout (function(){ document.getElementById("img").src = "hit6.svg"  }, 1000);
