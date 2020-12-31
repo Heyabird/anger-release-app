@@ -11,10 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="disable-dbl-tap-zoom">    
+<body class="disable-dbl-tap-zoom">   
+    <div id="header">
+        <h2>Smash Computer</h2>
+    </div> 
     <div id="secret-button" onclick="updateUI()"> </div>
     <div class="keys">
-        <img id="img" src="hit1.svg"/>
+        <img id="img" src="hit1.svg" alt="smash computer main character ready to smash computer"/>
         <div data-key="32" class="key">
             <span class="sound score-box">hit score: <span id="hit-score"></span></span>
         </div>
@@ -27,10 +30,11 @@
         </div>
         <br/>
         <div class="footer">
-            <p>Made with love and angst by <a style="color:rgb(87, 210, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p>
+            <!-- <p>Made with love and angst by <a style="color:rgb(87, 210, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p> -->
+            <a href="https://twitter.com/heyathebird?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @heyathebird</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
-    <audio data-key="32" src="slap.wav"></audio>
+    <!-- <audio data-key="32" src="slap.wav"></audio> -->
     <audio id="slapSound">
         <source src="slap.wav" type="audio/wav">
         Your browser does not support the audio element.

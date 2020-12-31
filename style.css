@@ -10,6 +10,11 @@ body,html {
   font-family: sans-serif;
 }
 
+#header {
+  padding: 0 1rem;
+  /* background-color: b\ */
+}
+
 .keys {
   display: block;
   flex: 1;
@@ -85,7 +90,7 @@ kbd {
   z-index: 4;
   position: absolute;
   padding: 5px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   border: none;
   font-size: 20px;
   cursor: pointer;
