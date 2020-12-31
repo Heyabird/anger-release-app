@@ -46,6 +46,7 @@ function updateUI() {
     if (score > 4) {
         document.getElementById('textbox').innerHTML = "Ain't life hard?";
         document.getElementById('textbox-mobile').innerHTML = "Ain't life hard?";
+        document.getElementById('bar').style.width = "90%";
     }
     if (score > 19) {
         document.getElementById('textbox').innerHTML = "Uhh... are you ok?";

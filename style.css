@@ -17,21 +17,22 @@ body,html {
   /* background-color: b\ */
 }
 
-.health-bar {
+#health-bar {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 300px;
   height: 30px;
   padding: 5px;
+  margin: 8px 0;
   background: #ddd;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   position: relative;
 }
-.bar {
-  background: #c54;
+#bar {
+  background: rgb(12, 145, 0);
   color: white;
   /* padding: 1px 0; */
   width: 100%;
@@ -40,7 +41,7 @@ body,html {
   transition: width .5s linear;
 }
 
-.hit {
+#hit {
   background: rgba(255,255,255,0.6);
   position: absolute;
   top: 0;
@@ -164,7 +165,7 @@ kbd {
       margin: auto;
       position: relative;
     }
-    .health-bar {
+    #health-bar {
       width: inherit;
     }
     .keys {

@@ -46,12 +46,14 @@ function updateUI() {
     playSoundMobile();
     changeImage();
         score+=1;
+        
         setTimeout (function() { document.body.style.background =  'radial-gradient(#9198e5, #e66465)' });
         setTimeout (function() { document.body.style.background = 'white' }, 200);
         document.getElementById('hit-score').innerHTML = (score).toString();
         if (score>4) {
             document.getElementById('textbox').innerHTML = "Ain't life hard?";
             document.getElementById('textbox-mobile').innerHTML = "Ain't life hard?";
+            document.getElementById('bar').style.width = "90%";
         }
         if (score>19) {
             document.getElementById('textbox').innerHTML = "Uhh... are you ok?";
