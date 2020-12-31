@@ -6,7 +6,7 @@ var mainImg = document.getElementById("img").src;
 function animateText(e) {
     var key = document.querySelector(".key[data-key=\"" + e.keyCode + "\"]");
     console.log(key);
-    key.classList.add('playing');
+    // key.classList.add('playing');
 }
 ;
 function playSoundMobile() {
@@ -40,8 +40,10 @@ function updateUI() {
     playSoundMobile();
     changeImage();
     score += 1;
+    setTimeout(function () { document.body.style.background = 'radial-gradient(#9198e5, #e66465)'; });
+    setTimeout(function () { document.body.style.background = 'white'; }, 200);
     document.getElementById('hit-score').innerHTML = (score).toString();
-    if (score > 9) {
+    if (score > 4) {
         document.getElementById('textbox').innerHTML = "Ain't life hard?";
         document.getElementById('textbox-mobile').innerHTML = "Ain't life hard?";
     }
@@ -53,7 +55,7 @@ function updateUI() {
         document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
         document.getElementById('textbox-mobile').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
         document.getElementById("throwaway").style.display = "block";
-        document.getElementById('throwaway').innerHTML = "DESTROY COMPUTER 💀";
+        document.getElementById('throwaway').innerHTML = "THROW COMPUTER 😵";
     }
     if (score > 29) {
         document.getElementById('textbox').innerHTML = "I think it's time for you to take a break.";

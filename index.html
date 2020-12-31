@@ -14,16 +14,23 @@
 <body class="disable-dbl-tap-zoom">   
     <div id="header">
         <h2>Smash Computer</h2>
+        <div data-key="32" class="">
+            <span>&nbsp; hit score: <span id="hit-score"></span></span>
+        </div>
+        <div class="health-bar" data-total="1000" data-value="1000">
+            <div class="bar">
+                &nbsp; computer HP
+                  <div class="hit"></div>
+            </div>
+        </div>
     </div> 
     <div id="secret-button" onclick="updateUI()"> </div>
+
     <div class="keys">
         <img id="img" src="hit1.svg" alt="smash computer main character ready to smash computer"/>
-        <div data-key="32" class="key">
-            <span class="sound score-box">hit score: <span id="hit-score"></span></span>
-        </div>
         <br/>
-        <p id="textbox" style="text-align: center;">Press space bar to start.</p>
-        <p id="textbox-mobile">Tap anywhere to start.</p>
+        <p id="textbox" style="text-align: center;">Press space bar to smash computer.</p>
+        <p id="textbox-mobile">Tap anywhere to smash.</p>
         <!-- <button id="button-mobile" onclick="updateUI()">SMASH</button> -->
         <div style="margin: auto; display:flex; justify-content: center;">
             <button id="throwaway" onclick="throwAway()"></button>
@@ -31,7 +38,10 @@
         <br/>
         <div class="footer">
             <!-- <p>Made with love and angst by <a style="color:rgb(87, 210, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p> -->
-            <a href="https://twitter.com/heyathebird?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @heyathebird</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text=I%20smashed%20my%20computer%20today!">
+                Tweet your score</a>
+            <a href="https://twitter.com/heyathebird?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">@heyathebird</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
     <!-- <audio data-key="32" src="slap.wav"></audio> -->
