@@ -1,5 +1,5 @@
 var score = 0;
-document.getElementById('hit-score').innerHTML = score;
+document.getElementById('hit-score').innerHTML = (score).toString();
 var shatterSound = document.getElementById("shatterSound");
 var slapSound = document.getElementById("slapSound");
 var mainImg = document.getElementById("img").src;
@@ -40,7 +40,7 @@ function updateUI() {
     playSoundMobile();
     changeImage();
     score += 1;
-    document.getElementById('hit-score').innerHTML = score;
+    document.getElementById('hit-score').innerHTML = (score).toString();
     if (score > 9) {
         document.getElementById('textbox').innerHTML = "Ain't life hard?";
         document.getElementById('textbox-mobile').innerHTML = "Ain't life hard?";
