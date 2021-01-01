@@ -22,8 +22,13 @@ function removeTransition(e) {
     this.classList.remove('playing');
 }
 function changeImage() {
-    document.getElementById("img").src = "hit2.svg";
-    setTimeout(function () { document.getElementById("img").src = "hit1.svg"; }, 200);
+    if (score === 2) {
+        document.getElementById("img").src = "hit6.svg";
+    }
+    else {
+        document.getElementById("img").src = "hit2.svg";
+        setTimeout(function () { document.getElementById("img").src = "hit1.svg"; }, 200);
+    }
 }
 function throwAway() {
     shatterSound.currentTime = 600;
@@ -92,14 +97,14 @@ function updateUI() {
         document.getElementById('textbox-mobile').innerHTML = "Should I call the ambulance...?";
         document.getElementById('bar').style.width = "10%";
     }
-    if (score > 200) {
-        document.getElementById('textbox').innerHTML = "I don't have more messages for you, but I believe in you. If you came this far, you definitely have the willpower to succeed!";
-        document.getElementById('textbox-mobile').innerHTML = "I don't have more messages for you, but I believe in you. If you came this far, you definitely have the willpower to succeed!";
+    if (score > 2) {
+        document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
+        document.getElementById('textbox-mobile').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
         document.getElementById('bar').style.width = "0%";
     }
 }
 document.body.onkeyup = function (e) {
-    if (e.keyCode == 32) {
+    if (e.keyCode == 32 && score !== 3) {
         updateUI();
     }
 };

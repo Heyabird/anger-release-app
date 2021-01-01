@@ -171,6 +171,9 @@ kbd {
     #health-bar {
       width: inherit;
     }
+    #hp-text {
+      margin-left: 0;
+    }
     .keys {
     }
     .sound {
@@ -192,7 +195,7 @@ kbd {
       justify-content: center;
       margin: auto;
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
     }
     #textbox-mobile p{
       margin: .5rem auto;
