@@ -26,7 +26,7 @@ function removeTransition(e) {
 }
 
 function changeImage() {
-    if (score===2) {
+    if (score===200) {
         (<HTMLInputElement>document.getElementById("img")).src = "hit6.svg";
     }
     else {
@@ -112,7 +112,7 @@ function updateUI() {
 }
 
 document.body.onkeyup = function(e){
-    if(e.keyCode == 32 && score!==3){
+    if(e.keyCode == 32 && score!==201){
         updateUI();
     }
 }

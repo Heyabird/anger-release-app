@@ -22,7 +22,7 @@ function removeTransition(e) {
     this.classList.remove('playing');
 }
 function changeImage() {
-    if (score === 2) {
+    if (score === 200) {
         document.getElementById("img").src = "hit6.svg";
     }
     else {
@@ -81,30 +81,30 @@ function updateUI() {
         document.getElementById('textbox-mobile').innerHTML = "Welp, I hope this is kinda helpful at the least.";
         document.getElementById('bar').style.width = "40%";
     }
-    if (score > 75) {
+    if (score > 74) {
         document.getElementById('textbox').innerHTML = "Omg. You just hit your head over 75 times. How does that feel?";
         document.getElementById('textbox-mobile').innerHTML = "Omg. You just hit your head over 75 times. How does that feel?";
         document.getElementById('bar').style.width = "30%";
     }
-    if (score > 100) {
+    if (score > 99) {
         document.getElementById('textbox').innerHTML = "You just passed 100! You're accomplishing something!";
         document.getElementById('textbox-mobile').innerHTML = "You just passed 100! You're accomplishing something!";
         document.getElementById('bar').style.width = "20%";
         document.getElementById('bar').style.background = "red";
     }
-    if (score > 150) {
+    if (score > 149) {
         document.getElementById('textbox').innerHTML = "Should I call the ambulance...?";
         document.getElementById('textbox-mobile').innerHTML = "Should I call the ambulance...?";
         document.getElementById('bar').style.width = "10%";
     }
-    if (score > 2) {
+    if (score > 199) {
         document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
         document.getElementById('textbox-mobile').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
         document.getElementById('bar').style.width = "0%";
     }
 }
 document.body.onkeyup = function (e) {
-    if (e.keyCode == 32 && score !== 3) {
+    if (e.keyCode == 32 && score !== 201) {
         updateUI();
     }
 };
