@@ -44,14 +44,15 @@ function throwAway() {
     setTimeout (function(){ shatterSound.play()}, 600);
     setTimeout (function(){ document.getElementById('textbox').innerHTML = "Press space bar to continue." }, 900);
     // setTimeout (function(){ document.getElementById("img").src = "hit6.svg"  }, 1000);
-    console.log("test")
+    console.log("test");
+    score+=2;
+    setTimeout (function(){ document.getElementById('hit-score').innerHTML = (score).toString()}, 900);
 }
 
 function updateUI() {
     playSoundMobile();
     changeImage();
         score+=1;
-        
         setTimeout (function() { document.body.style.background =  'radial-gradient(#9198e5, #e66465)' });
         setTimeout (function() { document.body.style.background = 'white' }, 200);
         document.getElementById('hit-score').innerHTML = (score).toString();

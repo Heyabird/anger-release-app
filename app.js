@@ -40,6 +40,8 @@ function throwAway() {
     setTimeout(function () { document.getElementById('textbox').innerHTML = "Press space bar to continue."; }, 900);
     // setTimeout (function(){ document.getElementById("img").src = "hit6.svg"  }, 1000);
     console.log("test");
+    score += 2;
+    setTimeout(function () { document.getElementById('hit-score').innerHTML = (score).toString(); }, 900);
 }
 function updateUI() {
     playSoundMobile();
