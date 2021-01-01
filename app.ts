@@ -112,7 +112,7 @@ function updateUI() {
 }
 
 document.body.onkeyup = function(e){
-    if(e.keyCode == 32 && score!==201){
+    if(e.keyCode == 32 && score!==200){
         updateUI();
     }
 }
