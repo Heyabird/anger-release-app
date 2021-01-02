@@ -4,15 +4,18 @@ var shatterSound = document.getElementById("shatterSound");
 var slapSound = document.getElementById("slapSound");
 var mainImg = document.getElementById("img").src;
 function animateText(e) {
-    var key = document.querySelector(".key[data-key=\"" + e.keyCode + "\"]");
-    console.log(key);
+    // const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    // console.log(key);
     // key.classList.add('playing');
 }
 ;
-function playSoundMobile() {
-    if (score < 2) {
+function playSlapSound() {
+    if (score < 200) {
         slapSound.currentTime = 0;
         slapSound.play();
+    }
+    else if (score >= 200) {
+        // shatterSound.play();
     }
 }
 function removeTransition(e) {
@@ -23,7 +26,7 @@ function removeTransition(e) {
     this.classList.remove('playing');
 }
 function changeImage() {
-    if (score >= 1) {
+    if (score >= 199) {
         document.getElementById("img").src = "hit6.svg";
     }
     else {
@@ -41,13 +44,13 @@ function throwAway() {
     setTimeout(function () { document.getElementById('textbox').innerHTML = "Press space bar to continue."; }, 900);
     // setTimeout (function(){ document.getElementById("img").src = "hit6.svg"  }, 1000);
     console.log("test");
-    score += 2;
+    score += 5;
     setTimeout(function () { document.getElementById('hit-score').innerHTML = (score).toString(); }, 900);
 }
 function updateUI() {
-    playSoundMobile();
+    playSlapSound();
+    score += 30;
     changeImage();
-    score += 1;
     setTimeout(function () { document.body.style.background = 'radial-gradient(#9198e5, #e66465)'; });
     setTimeout(function () { document.body.style.background = 'white'; }, 200);
     document.getElementById('hit-score').innerHTML = (score).toString();
@@ -100,7 +103,8 @@ function updateUI() {
         document.getElementById('textbox-mobile').innerHTML = "Should I call the ambulance...?";
         document.getElementById('bar').style.width = "10%";
     }
-    if (score > 1) {
+    if (score > 199) {
+        document.getElementById("throwaway").style.display = "none";
         document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer. ";
         document.getElementById('textbox-mobile').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
         document.getElementById('bar').style.width = "0%";
@@ -108,7 +112,7 @@ function updateUI() {
     }
 }
 document.body.onkeyup = function (e) {
-    if (e.keyCode == 32 && score < 2) {
+    if (e.keyCode == 32 && score < 200) {
         updateUI();
     }
 };
