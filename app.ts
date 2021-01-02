@@ -12,9 +12,10 @@ function animateText(e) {
 };
 
 function playSoundMobile() {
-    slapSound.currentTime = 0;
-    slapSound.play();
-    // key.classList.add('playing');
+    if(score < 2){
+        slapSound.currentTime = 0;
+        slapSound.play();   
+    }
 }
 
 
