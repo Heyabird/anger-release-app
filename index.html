@@ -10,6 +10,15 @@
       href="imstuck_computer.png">
     <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nytimesbits" />
+    <meta name="twitter:creator" content="@nickbilton" />
+    <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
+    <meta property="og:title" content="A Twitter for My Sister" />
+    <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
+    <meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />
 </head>
 
 <body class="disable-dbl-tap-zoom">   
@@ -28,6 +37,7 @@
     <div id="secret-button" onclick="updateUI()"> </div>
 
     <div class="keys">
+        
         <img id="img" src="hit1.svg" alt="smash computer main character ready to smash computer"/>
         <br/>
         <p id="textbox" style="text-align: center;">Press space bar to smash computer.</p>
@@ -37,9 +47,10 @@
             <button id="throwaway" onclick="throwAway()"></button>
         </div>
         <p id="end-message"><a id="tweet-button"
-            href="https://twitter.com/intent/tweet?text=I%20smashed%20my%20computer%20today!">
+            href="https://twitter.com/intent/tweet?text=I%20smashed%20my%20computer%20today%20200%20times!" data-url="https://smashcomputer.netlify.app/"  data-hashtags="SmashComputer" data-show-count="false">
             <i class="fab fa-twitter"></i> Tweet</a> your destruction here.</p>
         <br/>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Hi! I destroyed a virtual computer today on" data-url="https://smashcomputer.netlify.app/" data-hashtags="SmashComputer" data-related="" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <div class="footer">
             <!-- <p>Made with love and angst by <a style="color:rgb(87, 210, 255)" target="_blank" href="https://twitter.com/heyathebird">@heyathebird</a>.</p> -->
 
