@@ -94,9 +94,14 @@ kbd {
 #img {
   display: flex;
   justify-content: center;
-  width: 28rem;
+  width: 38rem;
   margin: auto;
   padding: 0 1rem 1rem 1rem;
+  bottom: 18%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 .img-after {
   display: none;
@@ -113,6 +118,11 @@ kbd {
 
 #textbox {
   font-size: 20px;
+  bottom: 20%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 
 #textbox p {
