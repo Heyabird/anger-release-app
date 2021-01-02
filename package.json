@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Heyabird/anger-release-app#readme",
   "devDependencies": {
     "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1"
   }
 }

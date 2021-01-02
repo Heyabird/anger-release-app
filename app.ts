@@ -26,7 +26,7 @@ function removeTransition(e) {
 }
 
 function changeImage() {
-    if (score>=199) {
+    if (score>=1) {
         (<HTMLInputElement>document.getElementById("img")).src = "hit6.svg";
     }
     else {
@@ -105,15 +105,16 @@ function updateUI() {
             document.getElementById('textbox-mobile').innerHTML = "Should I call the ambulance...?";
             document.getElementById('bar').style.width = "10%";
         }
-        if (score>199) {
-            document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
+        if (score>1) {
+            document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer. ";
             document.getElementById('textbox-mobile').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
             document.getElementById('bar').style.width = "0%";
+            document.getElementById("end-message").style.display = "block";    
         }   
 }
 
 document.body.onkeyup = function(e){
-    if(e.keyCode == 32 && score < 200){
+    if(e.keyCode == 32 && score < 2){
         updateUI();
     }
 }

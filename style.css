@@ -143,6 +143,20 @@ kbd {
   opacity: 0.5;
 }
 
+#end-message {
+  text-align: center;
+  display: none;
+}
+
+#tweet-button {
+  background-color: #1b95e0;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
 .footer {
   color:rgb(126, 126, 126); 
   text-align:center; 
