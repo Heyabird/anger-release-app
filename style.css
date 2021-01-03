@@ -210,6 +210,7 @@ kbd {
       /* margin-top: 10%; */
       max-width: 100%;
       padding: 0;
+      bottom: 25%;
     }
     #textbox {
       display: none;
@@ -222,17 +223,23 @@ kbd {
       margin: auto;
       text-align: center;
       font-size: 16px;
+      bottom: 15%;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
     }
     #textbox-mobile p{
       margin: .5rem auto;
       margin-top: 0;
     }
     #throwaway {
-      width: unset;
+      width: 90%;
       min-width: unset;
-      margin-top: 1rem;
-      font-size: 20px;
+      margin: 0 1rem;
+      font-size: 15px;
       padding: 5px 10px;
+      height: inherit;
     }
     .footer {
       padding-top: 2rem;

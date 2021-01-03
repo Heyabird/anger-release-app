@@ -54,6 +54,14 @@ function updateUI() {
     setTimeout(function () { document.body.style.background = 'radial-gradient(#9198e5, #e66465)'; });
     setTimeout(function () { document.body.style.background = 'white'; }, 200);
     document.getElementById('hit-score').innerHTML = (score).toString();
+    if (score > 199) {
+        document.getElementById("throwaway").style.display = "none";
+        document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer. ";
+        document.getElementById('textbox-mobile').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
+        document.getElementById('bar').style.width = "0%";
+        document.getElementById("end-message").style.display = "block";
+        return;
+    }
     if (score > 4) {
         document.getElementById('textbox').innerHTML = "Ain't life hard?";
         document.getElementById('textbox-mobile').innerHTML = "Ain't life hard?";
@@ -102,13 +110,6 @@ function updateUI() {
         document.getElementById('textbox').innerHTML = "Should I call the ambulance...?";
         document.getElementById('textbox-mobile').innerHTML = "Should I call the ambulance...?";
         document.getElementById('bar').style.width = "10%";
-    }
-    if (score > 199) {
-        document.getElementById("throwaway").style.display = "none";
-        document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer. ";
-        document.getElementById('textbox-mobile').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
-        document.getElementById('bar').style.width = "0%";
-        document.getElementById("end-message").style.display = "block";
     }
 }
 document.body.onkeyup = function (e) {
