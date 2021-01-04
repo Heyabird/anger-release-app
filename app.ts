@@ -64,7 +64,8 @@ function showScoreIncrease(score, color, fontSize) {
     elem.style.color = color;
     elem.style.fontSize = fontSize;
     elem.style.left = Math.round(Math.random() * fullWidth) + "px";
-    elem.style.top = Math.round(Math.random() * fullHeight - 10) + "px";
+    elem.style.top = Math.round(Math.random() * fullHeight - 100) + "px";
+    elem.style.opacity = "0.3";
     document.body.appendChild(elem);
 }
 
@@ -84,7 +85,11 @@ function updateUI() {
         document.getElementById("end-message").style.display = "block";   
         return;
     }  
-    if (score>4) {
+    if (score>1) {
+        document.getElementById('textbox').innerHTML = "There you go. Keep going.";
+        document.getElementById('textbox-mobile').innerHTML = "There you go. Keep going.";
+    }
+    if (score>9) {
         document.getElementById('textbox').innerHTML = "Ain't life hard?";
         document.getElementById('textbox-mobile').innerHTML = "Ain't life hard?";
         document.getElementById('bar').style.width = "90%";
@@ -95,10 +100,12 @@ function updateUI() {
         document.getElementById('bar').style.width = "80%";
     }
     if (score>25) {
-        document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";            
+        document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";           
+        // document.getElementById('textbox').style.color = "red";
         document.getElementById('textbox-mobile').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
+        // document.getElementById('textbox-mobile').style.color = "red";
         document.getElementById("throwaway").style.display = "block";    
-        document.getElementById('throwaway').innerHTML = "THROW COMPUTER 😵"
+        document.getElementById('throwaway').innerHTML = "THROW COMPUTER 😵";
         document.getElementById('bar').style.width = "70%";
     }  
     if (score>29) {
