@@ -5,12 +5,6 @@ var slapSound = document.getElementById("slapSound");
 var gameoverSound = document.getElementById("gameoverSound");
 gameoverSound.volume = 0.3;
 var mainImg = document.getElementById("img").src;
-function animateText(e) {
-    // const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-    // console.log(key);
-    // key.classList.add('playing');
-}
-;
 function playSlapSound() {
     if (score < 200) {
         slapSound.currentTime = 0;
@@ -31,10 +25,13 @@ function changeImage() {
     document.getElementById("img").src = "hit2.svg";
     if (score >= 199) {
         setTimeout(function () { document.getElementById("img").src = "hit6.svg"; }, 400);
-        setTimeout(function () { document.getElementById("img").classList.add("shake-long"); }, 400);
+        setTimeout(function () { document.getElementById("img").classList.add("shake"); }, 400);
+        setTimeout(function () { document.getElementById("img").classList.remove("shake"); }, 1200);
     }
     else {
         setTimeout(function () { document.getElementById("img").src = "hit1.svg"; }, 200);
+        // setTimeout (function(){ document.body.classList.add("shake") }, 100);
+        // setTimeout (function(){ document.body.classList.remove("shake") }, 200);
     }
 }
 function throwAway() {
@@ -73,6 +70,8 @@ function showScoreIncrease(score, color, fontSize) {
 }
 function computerDestroyed() {
     gameoverSound.play();
+    document.body.style.background = 'radial-gradient(#e66465, black)';
+    document.body.style.color = "white";
     document.getElementById("img").src = "hit6.svg";
     document.getElementById("throwaway").style.display = "none";
     document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer. ";
@@ -153,7 +152,3 @@ document.body.onkeyup = function (e) {
         updateUI();
     }
 };
-// transition end event
-var keys = document.querySelectorAll('.key');
-keys.forEach(function (key) { return key.addEventListener('transitionend', removeTransition); });
-window.addEventListener('keydown', animateText);
