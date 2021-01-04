@@ -44,7 +44,11 @@ function throwAway() {
     setTimeout(function () { document.getElementById('textbox').innerHTML = "Press space bar to continue."; }, 900);
     // setTimeout (function(){ document.getElementById("img").src = "hit6.svg"  }, 1000);
     console.log("test");
-    score += 5;
+    score += 30;
+    if (score >= 170) {
+        computerDestroyed();
+        return;
+    }
     setTimeout(function () { document.getElementById('hit-score').innerHTML = (score).toString(); }, 900);
     setTimeout(function () { showScoreIncrease(5, "purple", "50px"); }, 900);
 }
@@ -59,23 +63,27 @@ function showScoreIncrease(score, color, fontSize) {
     elem.style.fontSize = fontSize;
     elem.style.left = Math.round(Math.random() * fullWidth) + "px";
     elem.style.top = Math.round(Math.random() * fullHeight - 100) + "px";
-    elem.style.opacity = "0.3";
+    elem.style.opacity = "0.2";
     document.body.appendChild(elem);
+}
+function computerDestroyed() {
+    setTimeout(function () { document.getElementById("img").src = "hit6.svg"; }, 1000);
+    document.getElementById("throwaway").style.display = "none";
+    document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer. ";
+    document.getElementById('textbox-mobile').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
+    document.getElementById('bar').style.width = "0%";
+    document.getElementById("end-message").style.display = "block";
 }
 function updateUI() {
     playSlapSound();
-    score += 1;
+    score += 30;
     showScoreIncrease(1, "red", "30px");
     changeImage();
     setTimeout(function () { document.body.style.background = 'radial-gradient(#9198e5, #e66465)'; });
     setTimeout(function () { document.body.style.background = 'white'; }, 200);
     document.getElementById('hit-score').innerHTML = (score).toString();
     if (score > 199) {
-        document.getElementById("throwaway").style.display = "none";
-        document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer. ";
-        document.getElementById('textbox-mobile').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
-        document.getElementById('bar').style.width = "0%";
-        document.getElementById("end-message").style.display = "block";
+        computerDestroyed();
         return;
     }
     if (score > 1) {
