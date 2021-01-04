@@ -259,9 +259,6 @@ kbd {
       z-index: 6;
       position: relative;
     }
-    #throaway-container {
-      z-index: 6;
-    }
     .footer {
       padding-top: 2rem;
       z-index:4;
@@ -272,7 +269,9 @@ kbd {
       z-index: 4;
       height: 100%;
       width: 100%;
+      margin-top: 20%;
       position: absolute;
+      background-color: red;
     }
     
   }
