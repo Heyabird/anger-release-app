@@ -2,7 +2,8 @@ var score = 0;
 document.getElementById('hit-score').innerHTML = (score).toString();  
 var shatterSound = (<HTMLAudioElement>document.getElementById("shatterSound"));
 var slapSound = (<HTMLAudioElement>document.getElementById("slapSound"));
-var slapSound = (<HTMLAudioElement>document.getElementById("gameOver"));
+var gameoverSound = (<HTMLAudioElement>document.getElementById("gameoverSound"));
+gameoverSound.volume = 0.3;
 var mainImg = (<HTMLInputElement>document.getElementById("img")).src;
 
 
@@ -31,12 +32,12 @@ function removeTransition(e) {
 }
 
 function changeImage() {
+    (<HTMLInputElement>document.getElementById("img")).src = "hit2.svg";
     if (score>=199) {
-        (<HTMLInputElement>document.getElementById("img")).src = "hit6.svg";
+        setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit6.svg"; }, 400);
     }
     else {
-        (<HTMLInputElement>document.getElementById("img")).src = "hit2.svg";
-    setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit1.svg" }, 200);
+        setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit1.svg" }, 200);
     }
 }
 
@@ -47,15 +48,15 @@ function throwAway() {
     setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit4.svg" }, 500);
     setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit5.svg" }, 800);
     setTimeout (function(){ shatterSound.play()}, 600);
-    setTimeout (function(){ document.getElementById('textbox').innerHTML = "Press space bar to continue." }, 900);
     // setTimeout (function(){ document.getElementById("img").src = "hit6.svg"  }, 1000);
     console.log("test");
     score+=30;
+    document.getElementById('hit-score').innerHTML = (score).toString();    
     if (score>=170) {
-        computerDestroyed();
+        setTimeout (function(){ computerDestroyed() }, 1000);
         return;
     }
-    setTimeout (function(){ document.getElementById('hit-score').innerHTML = (score).toString()}, 900);    
+    setTimeout (function(){ document.getElementById('textbox').innerHTML = "Press space bar to continue." }, 900);
     setTimeout (function(){ showScoreIncrease(5, "purple", "50px")}, 900);
 
 }
@@ -76,7 +77,8 @@ function showScoreIncrease(score, color, fontSize) {
 }
 
 function computerDestroyed() {
-    setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit6.svg"}, 1000);
+    gameoverSound.play();
+    (<HTMLInputElement>document.getElementById("img")).src = "hit6.svg";
     document.getElementById("throwaway").style.display = "none";     
     document.getElementById('textbox').innerHTML = "Congratulations, you have succesfully destroyed the computer. ";
     document.getElementById('textbox-mobile').innerHTML = "Congratulations, you have succesfully destroyed the computer.";
@@ -93,7 +95,7 @@ function updateUI() {
     setTimeout (function() { document.body.style.background = 'white' }, 200); 
     document.getElementById('hit-score').innerHTML = (score).toString();
     if (score>199) {
-        computerDestroyed();
+        setTimeout (function(){ computerDestroyed() } , 500);
         return;
     }  
     if (score>1) {
