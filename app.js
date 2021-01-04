@@ -46,25 +46,25 @@ function throwAway() {
     console.log("test");
     score += 5;
     setTimeout(function () { document.getElementById('hit-score').innerHTML = (score).toString(); }, 900);
-    setTimeout(function () { showScoreIncrease(5); }, 900);
+    setTimeout(function () { showScoreIncrease(5, "purple", "50px"); }, 900);
 }
-function showScoreIncrease(score) {
+function showScoreIncrease(score, color, fontSize) {
     var fullWidth = window.innerWidth;
     var fullHeight = window.innerHeight;
     var text = '+' + score;
     var elem = document.createElement("div");
     elem.textContent = text;
     elem.style.position = "absolute";
-    elem.style.color = "red";
-    elem.style.fontSize = "30px";
+    elem.style.color = color;
+    elem.style.fontSize = fontSize;
     elem.style.left = Math.round(Math.random() * fullWidth) + "px";
     elem.style.top = Math.round(Math.random() * fullHeight - 10) + "px";
     document.body.appendChild(elem);
 }
 function updateUI() {
     playSlapSound();
-    score += 30;
-    showScoreIncrease(1);
+    score += 1;
+    showScoreIncrease(1, "red", "30px");
     changeImage();
     setTimeout(function () { document.body.style.background = 'radial-gradient(#9198e5, #e66465)'; });
     setTimeout(function () { document.body.style.background = 'white'; }, 200);
