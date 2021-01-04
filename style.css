@@ -259,7 +259,7 @@ kbd {
       font-size: 15px;
       padding: 5px 10px;
       height: inherit;
-      position: inherit;
+      /* position: inherit; */
     }
     .footer {
       padding-top: 2rem;
