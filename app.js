@@ -80,6 +80,9 @@ function computerDestroyed() {
     document.getElementById("end-message").style.display = "block";
 }
 function updateUI() {
+    if (score >= 200) {
+        return;
+    }
     playSlapSound();
     score += 30;
     showScoreIncrease(1, "red", "30px");
@@ -148,7 +151,7 @@ function updateUI() {
     }
 }
 document.body.onkeyup = function (e) {
-    if (e.keyCode == 32 && score < 200) {
+    if (e.keyCode == 32) {
         updateUI();
     }
 };
