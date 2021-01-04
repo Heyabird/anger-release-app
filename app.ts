@@ -35,6 +35,7 @@ function changeImage() {
     (<HTMLInputElement>document.getElementById("img")).src = "hit2.svg";
     if (score>=199) {
         setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit6.svg"; }, 400);
+        setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).classList.add("shake-long") }, 400);
     }
     else {
         setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit1.svg" }, 200);
@@ -48,6 +49,8 @@ function throwAway() {
     setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit4.svg" }, 500);
     setTimeout (function(){ (<HTMLInputElement>document.getElementById("img")).src = "hit5.svg" }, 800);
     setTimeout (function(){ shatterSound.play()}, 600);
+    setTimeout (function(){ document.body.classList.add("shake") }, 600);
+    setTimeout (function(){ document.body.classList.remove("shake") }, 1000);
     // setTimeout (function(){ document.getElementById("img").src = "hit6.svg"  }, 1000);
     console.log("test");
     score+=30;
