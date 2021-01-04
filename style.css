@@ -259,6 +259,7 @@ kbd {
       font-size: 15px;
       padding: 5px 10px;
       height: inherit;
+      z-index: 6;
       /* position: inherit; */
     }
     .footer {
