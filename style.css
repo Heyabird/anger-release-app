@@ -103,8 +103,8 @@ kbd {
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 3;
-  background-color: purple;
+  z-index: 2;
+  /* background-color: purple; */
 }
 .img-after {
   display: none;
