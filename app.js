@@ -45,7 +45,7 @@ function throwAway() {
     setTimeout(function () { document.body.classList.remove("shake"); }, 1000);
     // setTimeout (function(){ document.getElementById("img").src = "hit6.svg"  }, 1000);
     console.log("test");
-    score += 30;
+    score += 5;
     document.getElementById('hit-score').innerHTML = (score).toString();
     if (score >= 170) {
         setTimeout(function () { computerDestroyed(); }, 1000);
@@ -84,7 +84,7 @@ function updateUI() {
         return;
     }
     playSlapSound();
-    score += 30;
+    score += 1;
     showScoreIncrease(1, "red", "30px");
     changeImage();
     setTimeout(function () { document.body.style.background = 'radial-gradient(#9198e5, #e66465)'; });
