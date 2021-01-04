@@ -125,6 +125,7 @@ kbd {
   margin: auto;
   left: 0;
   right: 0;
+  z-index: 3;
 }
 
 #textbox p {
@@ -142,7 +143,7 @@ kbd {
   min-width: 300px;
   background-color: black;
   color: white;
-  z-index: 4;
+  z-index: 5;
   position: absolute;
   padding: 3px;
   /* border-radius: 5px; */
@@ -249,6 +250,7 @@ kbd {
     #textbox-mobile p{
       margin: .5rem auto;
       margin-top: 0;
+      z-index: 3;
     }
     #throwaway {
       width: 90%;
@@ -257,6 +259,7 @@ kbd {
       font-size: 15px;
       padding: 5px 10px;
       height: inherit;
+      position: inherit;
     }
     .footer {
       padding-top: 2rem;
