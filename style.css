@@ -260,7 +260,7 @@ kbd {
       padding: 5px 10px;
       height: inherit;
       z-index: 6;
-      /* position: inherit; */
+      position: inherit;
     }
     .footer {
       padding-top: 2rem;
