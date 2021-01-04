@@ -260,7 +260,10 @@ kbd {
       padding: 5px 10px;
       height: inherit;
       z-index: 6;
-      position: inherit;
+      position: relative;
+    }
+    #throaway-container {
+      z-index: 6;
     }
     .footer {
       padding-top: 2rem;
