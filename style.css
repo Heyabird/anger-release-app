@@ -104,6 +104,7 @@ kbd {
   left: 0;
   right: 0;
   z-index: 3;
+  background-color: purple;
 }
 .img-after {
   display: none;
@@ -226,6 +227,7 @@ kbd {
       max-width: 100%;
       padding: 0;
       bottom: 20%;
+      
     }
     #textbox {
       display: none;
@@ -269,9 +271,8 @@ kbd {
       z-index: 4;
       height: 100%;
       width: 100%;
-      margin-top: 20%;
+      margin-top: 10%;
       position: absolute;
-      background-color: red;
     }
     
   }
