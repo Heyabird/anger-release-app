@@ -265,7 +265,7 @@ kbd {
       bottom: 1.5rem;
     }
     #secret-button {
-      z-index: 2;
+      z-index: 4;
       height: 100%;
       width: 100%;
       position: absolute;
