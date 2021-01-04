@@ -99,7 +99,7 @@ function updateUI() {
         document.getElementById('textbox-mobile').innerHTML = "Uhh... are you ok?";
         document.getElementById('bar').style.width = "80%";
     }
-    if (score>2) {
+    if (score>25) {
         document.getElementById('textbox').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";           
         // document.getElementById('textbox').style.color = "red";
         document.getElementById('textbox-mobile').innerHTML = "Alright, let's throw the computer OUT THE WINDOW.";
