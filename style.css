@@ -15,6 +15,7 @@ body,html {
   position:absolute;
   font-weight: 200;
   /* background-color: b\ */
+  z-index: 3;
 }
 
 
@@ -31,6 +32,7 @@ body,html {
   -moz-border-radius: 5px;
   border-radius: 5px;
   position: relative;
+  z-index: 3;
 }
 #bar {
   background: rgb(12, 145, 0);
@@ -101,6 +103,7 @@ kbd {
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 3;
 }
 .img-after {
   display: none;
@@ -147,7 +150,22 @@ kbd {
   font-size: 15px;
   cursor: pointer;
   border-radius: 5px;
-  height: 30px;
+  height: 38px;
+  -webkit-animation: flash 1s infinite;  /* Safari 4+ */
+  -moz-animation: flash 1s infinite;  /* Fx 5+ */
+  -o-animation: flash 1s infinite;  /* Opera 12+ */
+  animation: flash 1s infinite;  /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes flash {
+  0%, 49% {
+    background-color: rgb(117, 209, 63);
+    border: 3px solid #e50000;
+  }
+  50%, 100% {
+    background-color: #e50000;
+    border: 3px solid rgb(117, 209, 63);
+  }
 }
 
 #throwaway:hover {
