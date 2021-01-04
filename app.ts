@@ -57,9 +57,7 @@ function throwAway() {
 function showScoreIncrease(score) {
     var fullWidth = window.innerWidth;
     var fullHeight = window.innerHeight;
-    
     var text = '+' + score;
-    
     var elem = document.createElement("div");
     elem.textContent = text;
     elem.style.position = "absolute";
