@@ -198,10 +198,6 @@ kbd {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-#end-message {
-  text-align: center;
-  display: none;
-}
 
 #tweet-button {
   background-color: #1b95e0;
